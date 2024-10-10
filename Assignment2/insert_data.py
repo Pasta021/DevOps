@@ -2,8 +2,8 @@
 from pymongo import MongoClient
 
 # MongoDB Atlas Connection
-client = MongoClient("mongodb+srv://root:iCJPtO3HoTEUyZ3e@cluster0.bb9ww.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-db = client.app  # Replace "app" with your database name
+client = MongoClient("mongodb+srv://root:9xgCOMv6ZbMtpPKH@cluster0.kaq1p.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+db = client.shop_db  # Replace "app" with your database name
 products_collection = db.products  # Replace products with your collection name
 
 # Example product objects
@@ -36,4 +36,4 @@ black_friday_deals = {
     }
 
 products_collection.insert_many(products)  # allows you to add a list of dictionaries into the database
-# products_collection.insert_one(black_friday_deals)  # allows you to add a single dictionary into the database
+products_collection.insert_one(black_friday_deals)  # allows you to add a single dictionary into the database
